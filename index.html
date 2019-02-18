@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<!--
+Copyright 2017, 2019 Duane Paulson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation   rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+<head>
+    <title>tryangle</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="tryangle.css">
+    <script type="text/javascript" src="tryangle.js"></script>
+</head>
+<body>
+<div id="canvas">
+<div id="table_bg">
+<table>
+<tbody>
+    <tr id="top">
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+    </tr>
+    <tr>
+        <td colspan="10" id="text">
+            <span id="pieces_left"></span> 
+            <span id="possible_moves">Click or tap a game piece to start</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="occupied" colspan="2" id="a1" name="game" onclick="clicked(this)"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+    </tr>
+    <tr>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="occupied" colspan="2" id="b1" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="b2" name="game" onclick="clicked(this)"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+    </tr>
+    <tr>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+        <td class="occupied" colspan="2" id="c1" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="c2" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="c3" name="game" onclick="clicked(this)"></td>
+        <td class="invisible"></td>
+        <td class="invisible"></td>
+    </tr>
+    <tr>
+        <td class="invisible"></td>
+        <td class="occupied" colspan="2" id="d1" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="d2" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="d3" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="d4" name="game" onclick="clicked(this)"></td>
+        <td class="invisible"></td>
+    </tr>
+    <tr>
+        <td class="occupied" colspan="2" id="e1" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="e2" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="e3" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="e4" name="game" onclick="clicked(this)"></td>
+        <td class="occupied" colspan="2" id="e5" name="game" onclick="clicked(this)"></td>
+    </tr>
+</tbody>
+</table>
+</div>
+<div>
+    <button type="button" onclick="new_game()">New Game</button>
+    <div style="float: right;">
+        <button type="button" id="log_button" onclick="show_log(this)">Show Log</button>
+    </div>
+    <div style="text-align: center;"><button id="show_names" onclick="show_ids(this)">Show names</button></div>
+</div>
+<div id="log"></div>
+</div>
+</body>
+</html>
